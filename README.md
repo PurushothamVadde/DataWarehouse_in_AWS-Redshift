@@ -5,6 +5,7 @@
 This project has below modules:
 - [Project Understanding](#project-understanding)
 - [Data](#data)
+- [Project Structure](#project-structure_
 - [AWS Setup](#aws-setup)
 - [ETL Pipeline](#etl-pipeline)
 - [Conclusion](#conclusion)
@@ -16,6 +17,14 @@ The Goal of this project is to build a ETL pipeline that will be able to Extract
 The Datasets log_data and song_data used for this project are retrived from the s3 bucket and are in the json format.
 - Song data: s3://udacity-dend/song_data
 - Log data: s3://udacity-dend/log_data
+
+## Project Structure
+AWS_Setup.ipynb is where the AWS components of this project created with Iac.
+Create_Tables.py is where fact and dimension tables for the star schema in Redshift are created.
+etl.py is where data gets loaded from S3 into staging tables on Redshift and then processed into the analytics tables on Redshift.
+Sql_Queries.py where SQL statements are defined, which are then used by etl.py, create_table.py and Data_Anlaytics.ipynb.
+Data_Anlaytics.ipynb runs a few queries on the created star schema to validate that the project has been completed successfully.
+README.md is current file.
 
 ## AWS Setup
 As part of this project we have setup the AWS Redshift with Iac(Infrastructure as Code). 
