@@ -7,8 +7,6 @@ This project has below modules:
 - [Data](#data)
 - [AWS Setup](#aws-setup)
 - [ETL Pipeline](#etl-pipeline)
-- [Data Analytics](#data-analytics)
-
 
 ## Project Understanding
 The Goal of this project is to build a ETL pipeline that will be able to Extract the **Songs** data from AWS S3 bucket and Transform the data to make it friendly for Analytics and load the data into Fact and Dim tables in Redshift, so that the data can be used by Business Intelligence and visualization apps that will help the Data Analytics team to better understand what are the most frequently played songs in the music app.
@@ -52,8 +50,6 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
 - In this step the data from the S3 bucket stored into the redshift by creating the staging tables.
 - by using Staging tables we created the Fact and Dimension tables by following the star schema which is more suitable for the OLAP operations which is the purpose of ETL.
 - The data in the staging tables need to transformed to fit the data model in the Fact and Dimension tables such as the source timestamo is in unix format and need to convert to year, month, day , hour etc.
-## Data Analytics
-
 ### Fact Table
 ![fact](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/fact.png)
 ### Dimension Tables
