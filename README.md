@@ -49,7 +49,8 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
 ## ETL Pipeline
 - In this step the data from the S3 bucket stored into the redshift by creating the staging tables.
 - by using Staging tables we created the Fact and Dimension tables by following the star schema which is more suitable for the OLAP operations which is the purpose of ETL.
-- The data in the staging tables need to transformed to fit the data model in the Fact and Dimension tables such as the source timestamo is in unix format and need to convert to year, month, day , hour etc.
+- The data in the staging tables need to transformed to fit the data model in the Fact and Dimension tables such as the source timestamp is in unix format and need to convert to year, month, day , hour etc.
+- we can see the final fact and dimension tables below after the ETL Process.
 ### Fact Table
 ![fact](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/fact.png)
 ### Dimension Tables
@@ -61,3 +62,7 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
 ![song](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/song.png)
 #### time
 ![time](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/time.png)
+
+## Conclusion
+
+The above (ETL tables) Fact and Dimension tables can use by the Data Analytics team to perform analytics such as most played songs etc.
