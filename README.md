@@ -20,6 +20,36 @@ The Datasets log_data and song_data used for this project are retrived from the 
 - Log data: s3://udacity-dend/log_data
 
 ## AWS Setup
+As part of this project we have setup the AWS Redshift with Iac(Infrastructure as Code). 
+design the config file as below with AWS iam credentials, Redshift cluster details and s3 bucket details so that we can use this config file in set setup the Redshift cluster and access the AWS and s3 bucket.
+
+> [DWH] \
+  CLUSTER_TYPE = multi-node \
+  NUM_NODES = 4 \
+  NODE_TYPE = dc2.large \ 
+  IAM_ROLE_NAME = XXXXXXXX \
+  CLUSTER_IDENTIFIER = XXXXXXX \
+  HOST = sparkifycluster.XXXXXXXXX.us-west-2.redshift.amazonaws.com \
+  DB_NAME = sparkify \
+  DB_USER = XXXXXXX \
+  DB_PASSWORD = XXXXXXX \
+  DB_PORT = 5439 \
+  [IAM_ROLE] \
+  ARN = arn:aws:iam::XXXXXXX:role/myXXXXXXRole \
+  [S3] \
+  LOG_DATA = 's3://udacity-dend/log_data' \
+  LOG_JSONPATH = 's3://udacity-dend/log_json_path.json' \
+  SONG_DATA = 's3://udacity-dend/song_data' \
+  [AWS] \
+  ACCESS_KEY = XXXXXXXXXXXXXXXXX \
+  SECRET_KEY = XXXXXXXXXXXXXXXXXXXXXXXX \
+  [CLUSTER] \
+  HOST = sparkifycluster.XXXXXX.us-west-2.redshift.amazonaws.com \
+  DB_NAME = sparkify \
+  DB_USER = XXXXX \
+  DB_PASSWORD = XXXXX \
+  DB_PORT = 5439 \
+
 ## Database Schema Design
 ## ETL Pipeline
 ## Data Analytics
