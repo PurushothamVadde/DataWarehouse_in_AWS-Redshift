@@ -7,6 +7,7 @@ This project has below modules:
 - [Data](#data)
 - [AWS Setup](#aws-setup)
 - [ETL Pipeline](#etl-pipeline)
+- [Conclusion](#conclusion)
 
 ## Project Understanding
 The Goal of this project is to build a ETL pipeline that will be able to Extract the **Songs** data from AWS S3 bucket and Transform the data to make it friendly for Analytics and load the data into Fact and Dim tables in Redshift, so that the data can be used by Business Intelligence and visualization apps that will help the Data Analytics team to better understand what are the most frequently played songs in the music app.
@@ -64,5 +65,4 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
 ![time](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/time.png)
 
 ## Conclusion
-
-The above (ETL tables) Fact and Dimension tables can use by the Data Analytics team to perform analytics such as most played songs etc.
+The above (ETL tables) Fact and Dimension tables can use by the Data Analytics team to better understand what are the most frequently played songs in the music app.
