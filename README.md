@@ -49,8 +49,8 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
   DB_PASSWORD = XXXXX \
   DB_PORT = 5439 \
 ## ETL Pipeline
-- In this step the data from the S3 bucket and stored into the redshift by creating the staging tables.
-- We created the Fact and Dimension tables by following the star schema which is more suitable for the OLAP operations which is the purpose of ETL.
+- In this step the data from the S3 bucket stored into the redshift by creating the staging tables.
+- by using Staging tables we created the Fact and Dimension tables by following the star schema which is more suitable for the OLAP operations which is the purpose of ETL.
 - The data in the staging tables need to transformed to fit the data model in the Fact and Dimension tables such as the source timestamo is in unix format and need to convert to year, month, day , hour etc.
 ## Data Analytics
 
