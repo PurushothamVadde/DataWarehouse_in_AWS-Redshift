@@ -1,1 +1,1 @@
-# DataWarehouses_in_AWS
+# DataWarehouse_in_AWS
