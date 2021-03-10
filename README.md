@@ -1,1 +1,1 @@
-# DataWarehouse_in_AWS
+# DataWarehouse_in_AWS-Redshift
