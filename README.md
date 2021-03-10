@@ -5,7 +5,7 @@
 This project has below modules:
 - [Project Understanding](#project-understanding)
 - [Data](#data)
-- [Project Structure](#project-structure_
+- [Project Structure](#project-structure)
 - [AWS Setup](#aws-setup)
 - [ETL Pipeline](#etl-pipeline)
 - [Conclusion](#conclusion)
