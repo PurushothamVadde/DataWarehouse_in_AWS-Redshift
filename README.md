@@ -6,7 +6,6 @@ This project has below modules:
 - [Project Understanding](#project-understanding)
 - [Data](#data)
 - [AWS Setup](#aws-setup)
-- [Database Schema Design](#database-schema-design)
 - [ETL Pipeline](#etl-pipeline)
 - [Data Analytics](#data-analytics)
 
@@ -49,7 +48,20 @@ design the config file as below with AWS iam credentials, Redshift cluster detai
   DB_USER = XXXXX \
   DB_PASSWORD = XXXXX \
   DB_PORT = 5439 \
-
-## Database Schema Design
 ## ETL Pipeline
+- In this step the data from the S3 bucket and stored into the redshift by creating the staging tables.
+- We created the Fact and Dimension tables by following the star schema which is more suitable for the OLAP operations which is the purpose of ETL.
+- The data in the staging tables need to transformed to fit the data model in the Fact and Dimension tables such as the source timestamo is in unix format and need to convert to year, month, day , hour etc.
 ## Data Analytics
+
+### Fact Table
+![fact](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/fact.png)
+### Dimension Tables
+#### user
+![user](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/user.png)
+#### artist
+![artist](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/artist.png)
+#### song
+![song](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/song.png)
+#### time
+![time](https://github.com/PurushothamVadde/DataWarehouse_in_AWS-Redshift/blob/master/images/time.png)
